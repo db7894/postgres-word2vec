@@ -2,7 +2,7 @@ EXTENSION = freddy
 DATA = freddy--0.0.1.sql  # script files to install
 OBJS = $(patsubst %.c,%.o,$(wildcard dep/c_hashmap/*.c)) $(patsubst %.c,%.o,$(wildcard *.c))
 MODULE_big = $(EXTENSION)
-PG_CPPFLAGS = -lpq -I/usr/include/postgresql -Idep/c_hashmap -L$(pg_config --libdir) -lpq -fPIC
+PG_CPPFLAGS = -lpq -I/usr/include/postgresql -Idep/c_hashmap -L$(pg_config --libdir) -lpq -fPIC -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
 
 # postgres build stuff
 PG_CONFIG = pg_config
